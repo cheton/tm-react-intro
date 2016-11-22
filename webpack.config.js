@@ -46,10 +46,6 @@ module.exports = {
       loaders: ["style", "raw"],
       include: __dirname
     }, {
-      test: /\.svg$/,
-      loader: "url?limit=10000&mimetype=image/svg+xml",
-      include: path.join(__dirname, "assets")
-    }, {
       test: /\.png$/,
       loader: "url-loader?mimetype=image/png",
       include: path.join(__dirname, "assets")
@@ -61,6 +57,16 @@ module.exports = {
       test: /\.jpg$/,
       loader: "url-loader?mimetype=image/jpg",
       include: path.join(__dirname, "assets")
+    }, {
+      test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      loader: 'url-loader',
+      query: {
+        limit: 10000,
+        mimetype: 'application/font-woff'
+      }
+    }, {
+      test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      loader: 'file-loader'
     }]
   }
 };

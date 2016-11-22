@@ -48,6 +48,15 @@ const Pineapple = () => (
     <span>{'\u{1f34d}'}</span>
 );
 
+const PPAP = () => (
+    <span>
+        <Pen />
+        <Pineapple />
+        <Apple />
+        <Pen />
+    </span>
+);
+
 const icons = {
     pineapple: '\u{1f34d}',
     redapple: '\u{1f34e}',
@@ -245,13 +254,13 @@ export default Presentation = () => {
                     <br />
                     <Layout>
                         <Fill>
-                            <Text textSize="1em" bold>Declarative</Text>
+                            <Text textSize="1.2em" bold>Declarative</Text>
                         </Fill>
                         <Fill>
-                            <Text textSize="1em" bold>Component-Based</Text>
+                            <Text textSize="1.2em" bold>Component-Based</Text>
                         </Fill>
                         <Fill>
-                            <Text textSize="1em" bold>Learn Once,<br />Write Anywhere</Text>
+                            <Text textSize="1.2em" bold>Learn Once,<br />Write Anywhere</Text>
                         </Fill>
                     </Layout>
                 </Slide>
@@ -309,12 +318,16 @@ export default Presentation = () => {
                     <Heading size={1} textColor="secondary" fit>
                         我們再來看另外一個範例...
                     </Heading>
+                    <br />
+                    <Heading size={4} textColor="secondary">
+                        A Pratical Example
+                    </Heading>
                 </Slide>
                 <Slide
                     bgImage={images.PPAP}
                     notes={`
-                        Apple-Pen. Pineapple-Pen. ummm. Pen-Pineapple-Apple-Pen!
-                        沒錯！就是PICO太郎的PPAP
+                        想知道什麼是Component問PICO太郎就對了
+                        因為 Apple-Pen. Pineapple-Pen. ummm. Pen-Pineapple-Apple-Pen!
                     `}
                 >
                     <Text
@@ -334,11 +347,36 @@ export default Presentation = () => {
                             textShadow: '2px 2px 8px #222'
                         }}
                     >
-                        <Pen />
-                        <Pineapple />
-                        <Apple />
-                        <Pen />
+                        <PPAP />
                     </Text>
+                </Slide>
+                <Slide>
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <CodePane
+                                lang="jsx"
+                                source={require('raw!../assets/PPAP1.jsx.txt')}
+                                margin="20px"
+                                textSize="24px"
+                            />
+                        </div>
+                        <div className="col-sm-6">
+                            <Appear>
+                                <div>
+                                    <CodePane
+                                        lang="jsx"
+                                        source={require('raw!../assets/PPAP2.jsx.txt')}
+                                        margin="20px"
+                                        textSize="24px"
+                                    />
+                                    <br />
+                                    <Text textSize="64px">
+                                        🖊🍍🍎🖊
+                                    </Text>
+                                </div>
+                            </Appear>
+                        </div>
+                    </div>
                 </Slide>
                 <Slide
                     notes={`
@@ -393,39 +431,22 @@ export default Presentation = () => {
                         如何整合 React 元件至既有專案？
                     </Heading>
                     <br />
-                    <Layout>
-                        <Fill>
-                            <Appear fid="1">
-                                <Text
-                                    margin={10}
-                                    padding={40}
-                                    style={{
-                                        border: '2px solid #ccc'
-                                    }}
-                                >
-                                    Isolated State
-                                    <br />
-                                    w/ React
-                                    <i className="fa fa-cube" />
-                                </Text>
-                            </Appear>
-                        </Fill>
-                        <Fill>
-                            <Appear>
-                                <Text
-                                    margin={10}
-                                    padding={40}
-                                    style={{
-                                        border: '2px solid #ccc'
-                                    }}
-                                >
-                                    Shared State
-                                    <br />
-                                    w/ React
-                                </Text>
-                            </Appear>
-                        </Fill>
-                    </Layout>
+                    <Appear fid="1">
+                        <Text
+                            padding="20px 0"
+                            textAlign="left"
+                        >
+                            1. Isolated State with React
+                        </Text>
+                    </Appear>
+                    <Appear fid="2">
+                        <Text
+                            padding="20px 0"
+                            textAlign="left"
+                        >
+                            2. Shared State with React
+                        </Text>
+                    </Appear>
                 </Slide>
                 <Slide>
                     <Heading size={2} textColor="secondary">
@@ -443,7 +464,7 @@ export default Presentation = () => {
                     </Appear>
                 </Slide>
                 <Slide>
-                    <Heading size={1}>
+                    <Heading size={1} textColor="secondary">
                         Question
                     </Heading>
                 </Slide>

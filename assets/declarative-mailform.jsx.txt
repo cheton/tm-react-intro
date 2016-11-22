@@ -1,4 +1,3 @@
-// MailForm.jsx
 const MailForm = ({ from, to }) => {
     return (
         <form>

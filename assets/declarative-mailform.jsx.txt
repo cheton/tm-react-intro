@@ -1,9 +1,0 @@
-const MailForm = ({ from, to }) => {
-    return (
-        <form>
-            <input type="text" name="from" defaultValue={from} />
-            <input type="text" name="to" defaultValue={to} />
-            <button type="submit">Submit</button>
-        </form>
-    );
-};

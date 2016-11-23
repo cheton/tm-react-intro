@@ -1,0 +1,7 @@
+if (userLiked() {
+    removeGrayLike();
+    addBlueLike();
+} else {
+    removeBlueLike();
+    addGrayLike();
+}

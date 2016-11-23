@@ -1,4 +1,0 @@
-<MailForm
-    from="nobody@example.com"
-    to="admin@example.com"
-/>

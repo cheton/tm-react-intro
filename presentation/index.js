@@ -76,6 +76,7 @@ const images = {
         react: require('../assets/websites-using-react.png'),
         vuejs: require('../assets/websites-using-vuejs.png')
     },
+    fblike: require('../assets/fblike.jpg'),
     reactjs101: require('../assets/reactjs101.png'),
     reactjs101TOC: require('../assets/reactjs101TOC.png'),
     todoapp: require('../assets/todoapp.png'),
@@ -271,48 +272,79 @@ export default Presentation = () => {
                         而搭配JSX可以實現宣告式的程式撰寫方式．
                     `}
                 >
-                    <Heading size={1} textColor="secondary">
-                        Declarative UI
+                    <Heading size={2} textColor="secondary">
+                        Declarative
                     </Heading>
                     <br />
                     <Text textAlign="left">The JSX code:</Text>
                     <CodePane
                         lang="jsx"
-                        source={require('raw!../assets/declarative-app.jsx.txt')}
+                        source={require('raw!../assets/declarative-messagebox1.jsx.txt')}
                         margin="20px auto"
                         textSize="24px"
                     />
                 </Slide>
                 <Slide>
-                    <Heading size={1} textColor="secondary">
-                        Declarative UI
+                    <Heading size={2} textColor="secondary">
+                        Declarative
                     </Heading>
                     <br />
                     <Text textAlign="left">MailForm.jsx</Text>
                     <CodePane
                         lang="jsx"
-                        source={require('raw!../assets/declarative-mailform.jsx.txt')}
+                        source={require('raw!../assets/declarative-messagebox2.jsx.txt')}
                         margin="20px auto"
                         textSize="24px"
                     />
                 </Slide>
                 <Slide>
-                    <Heading size={1} textColor="secondary">
+                    <Image src={images.fblike} />
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <Appear>
+                                <div>
+                                    <Text textSize="1em">命令式 Imperative</Text>
+                                    <CodePane
+                                        lang="jsx"
+                                        source={require('raw!../assets/fblike-imperative.jsx.txt')}
+                                        textSize="24px"
+                                    />
+                                </div>
+                            </Appear>
+                        </div>
+                        <div className="col-sm-6">
+                            <Appear>
+                                <div>
+                                    <Text textSize="1em">宣告式 Declarative</Text>
+                                    <CodePane
+                                        lang="jsx"
+                                        source={require('raw!../assets/fblike-declarative.jsx.txt')}
+                                        textSize="24px"
+                                    />
+                                </div>
+                            </Appear>
+                        </div>
+                    </div>
+                </Slide>
+                <Slide>
+                    <Heading size={2} textColor="secondary">
                         Component
                     </Heading>
                     <br />
-                    <Layout>
-                        <Fill>
-                            <CodePane
-                                lang="jsx"
-                                source={require('raw!../assets/TodoApp.jsx.txt')}
-                                textSize="24px"
-                            />
-                        </Fill>
-                        <Fill>
+                    <div className="row">
+                        <div className="col-sm-6">
                             <Image src={images.todoapp} />
-                        </Fill>
-                    </Layout>
+                        </div>
+                        <div className="col-sm-6">
+                            <Appear>
+                                <CodePane
+                                    lang="jsx"
+                                    source={require('raw!../assets/TodoApp.jsx.txt')}
+                                    textSize="24px"
+                                />
+                            </Appear>
+                        </div>
+                    </div>
                 </Slide>
                 <Slide>
                     <Heading size={1} textColor="secondary" fit>
@@ -395,7 +427,7 @@ export default Presentation = () => {
                     <Image src={images.reactjs101TOC} />
                 </Slide>
                 <Slide>
-                    <Heading textColor="secondary" fit>
+                    <Heading size={2} textColor="secondary" fit>
                         React 的幾個重要特性
                     </Heading>
                     <br />
@@ -424,11 +456,8 @@ export default Presentation = () => {
                     </List>
                 </Slide>
                 <Slide>
-                    <Heading
-                        textColor="secondary"
-                        fit
-                    >
-                        如何整合 React 元件至既有專案？
+                    <Heading size={2} textColor="secondary" fit>
+                        如何整合 React 至既有專案？
                     </Heading>
                     <br />
                     <Appear fid="1">
@@ -462,6 +491,28 @@ export default Presentation = () => {
                     <Appear fid="3">
                         <Text textSize={128}>Component!</Text>
                     </Appear>
+                </Slide>
+                <Slide>
+                    <Heading size={2} textColor="secondary">
+                        Resources
+                    </Heading>
+                    <br />
+                    <List>
+                        <ListItem textSize="1em" textAlign="left">
+                            A curated list of awesome frontend development resources
+                            <br />
+                            <Link href="https://github.com/trendmicro-frontend/awesome" target="_blank" margin="0 0 0 60px">
+                                https://github.com/trendmicro-frontend/awesome
+                            </Link>
+                        </ListItem>
+                        <ListItem textSize="1em" textAlign="left">
+                            A web-based interface for CNC milling controller
+                            <br />
+                            <Link href="https://github.com/cheton/cnc" target="_blank" margin="0 0 0 60px">
+                                https://github.com/cheton/cnc
+                            </Link>
+                        </ListItem>
+                    </List>
                 </Slide>
                 <Slide>
                     <Heading size={1} textColor="secondary">

@@ -9,6 +9,7 @@ import {
     CodePane,
     Deck,
     Fill,
+    Fit,
     Heading,
     Image,
     Layout,
@@ -473,9 +474,63 @@ export default Presentation = () => {
                             padding="20px 0"
                             textAlign="left"
                         >
-                            2. Shared State with React
+                            2. Shared State with React - Container
                         </Text>
                     </Appear>
+                    <Appear fid="3">
+                        <Text
+                            padding="20px 0"
+                            textAlign="left"
+                        >
+                            3. Shared State with React - Redux
+                        </Text>
+                    </Appear>
+                </Slide>
+                <Slide
+                    notes="http://codepen.io/anon/pen/xRdPGY/"
+                    maxWidth="auto"
+                    maxHeight="auto"
+                >
+                    <Text textSize="1.2em" bold>
+                        Isolated State with React
+                    </Text>
+                    <Layout>
+                        <Fill>
+                            <iframe height="600" width="100%" scrolling='no' title='Isolated state with ReactJS' src='//codepen.io/cheton/embed/xRdPGY/?height=600&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true'>
+                        See the Pen <a href='http://codepen.io/cheton/pen/xRdPGY/'>Isolated state with ReactJS</a> by Cheton Wu (<a href='http://codepen.io/cheton'>@cheton</a>) on <a href='http://codepen.io'>CodePen</a>.
+                            </iframe>
+                        </Fill>
+                    </Layout>
+                </Slide>
+                <Slide
+                    notes="http://codepen.io/anon/pen/YpVrMO/"
+                    maxWidth="auto"
+                    maxHeight="auto"
+                >
+                    <Text textSize="1.2em" bold>
+                        Shared State with React - Container
+                    </Text>
+                    <Layout>
+                        <Fill>
+                            <iframe height="600" width="100%" scrolling='no' title='Shared state with ReactJS - Container' src='//codepen.io/cheton/embed/YpVrMO/?height=600&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true'>See the Pen <a href='http://codepen.io/cheton/pen/YpVrMO/'>Shared state with ReactJS - Container</a> by Cheton Wu (<a href='http://codepen.io/cheton'>@cheton</a>) on <a href='http://codepen.io'>CodePen</a>.
+                            </iframe>
+                        </Fill>
+                    </Layout>
+                </Slide>
+                <Slide
+                    notes="http://codepen.io/anon/pen/GNmMLz/"
+                    maxWidth="auto"
+                    maxHeight="auto"
+                >
+                    <Text textSize="1.2em" bold>
+                        Shared State with React - Redux
+                    </Text>
+                    <Layout>
+                        <Fill>
+                            <iframe height="600" width="100%" scrolling='no' title='Shared state with ReactJS - Redux' src='//codepen.io/cheton/embed/GNmMLz/?height=600&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true'>See the Pen <a href='http://codepen.io/cheton/pen/GNmMLz/'>Shared state with ReactJS - Redux</a> by Cheton Wu (<a href='http://codepen.io/cheton'>@cheton</a>) on <a href='http://codepen.io'>CodePen</a>.
+                            </iframe>
+                        </Fill>
+                    </Layout>
                 </Slide>
                 <Slide>
                     <Heading size={2} textColor="secondary">
@@ -483,13 +538,13 @@ export default Presentation = () => {
                     </Heading>
                     <br />
                     <Appear fid="1">
-                        <Text textSize={64}>Component!</Text>
+                        <Text textColor="#444" textSize={64}>Component!</Text>
                     </Appear>
                     <Appear fid="2">
-                        <Text textSize={96}>Component!</Text>
+                        <Text textColor="#222" textSize={96}>Component!</Text>
                     </Appear>
                     <Appear fid="3">
-                        <Text textSize={128}>Component!</Text>
+                        <Text textColor="#000" textSize={128}>Component!</Text>
                     </Appear>
                 </Slide>
                 <Slide>

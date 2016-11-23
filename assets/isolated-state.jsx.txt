@@ -1,0 +1,46 @@
+const emojis = [
+    { name: "Pen", icon: "🖊" }, 
+    { name: "Apple", icon: "🍎" },
+    { name: "Pineapple", icon: "🍍" },
+    { name: "Apple-Pen", icon: "🍎🖊" },
+    { name: "Pineapple-Pen", icon: "🍍🖊" },
+    { name: "Pen-Pineapple-Apple-Pen", icon: "🖊🍍🍎🖊" }
+];
+
+class EmojiContainer extends React.Component {
+    state = {
+        emoji: {
+            name: "PPAP!", 
+            icon: null 
+        }
+    };
+    actions = {
+        handleButtonClick: (event) => {
+            const emoji = this.nextEmoji();
+            this.setState({ emoji: emoji });
+        }
+    };
+        
+    nextEmoji() {
+        while (1) {
+            const index = Math.floor(Math.random() * emojis.length);
+            const emoji = emojis[index];
+            if (emoji.name !== this.state.emoji.name) {
+                return emoji;
+            }
+        }
+    }
+    render() {
+        const { emoji } = this.state;
+        
+        return (
+            <div className="Emoji">
+                <div className="Emoji__emoji">{emoji.icon}</div>
+                <div className="Emoji__name">{emoji.name}</div>
+                <button className="Emoji__button" onClick={this.actions.handleButtonClick}>Next</button>
+            </div>
+        )
+    }
+}
+
+React.render(<EmojiContainer />, document.getElementById('emoji-container'));

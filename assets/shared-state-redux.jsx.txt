@@ -1,0 +1,127 @@
+const {
+    connect,
+    Provider
+} = ReactRedux;
+
+const {
+    bindActionCreators,
+    combineReducers,
+    createStore
+} = Redux;
+
+// Constants
+const SET_EMOJI = "SET_EMOJI";
+const emojis = [
+    { name: "Pen", icon: "🖊" }, 
+    { name: "Apple", icon: "🍎" },
+    { name: "Pineapple", icon: "🍍" },
+    { name: "Apple-Pen", icon: "🍎🖊" },
+    { name: "Pineapple-Pen", icon: "🍍🖊" },
+    { name: "Pen-Pineapple-Apple-Pen", icon: "🖊🍍🍎🖊" }
+];
+
+// Actions
+const actions = {
+    setEmoji: (emoji) => {
+        return { 
+            type: SET_EMOJI,
+            payload: emoji
+        };
+    }
+};
+
+// Reducer
+const initialState = {
+    emoji: {
+        name: "PPAP!",
+        icon: null
+    }
+};
+
+const reducer = (state = initialState, action) => {
+    switch (action.type) {
+        case SET_EMOJI:
+            return {
+                ...state,
+                emoji: action.payload
+            };
+      
+        default:
+            return state;      
+    }
+};
+
+// Component: EmojiView
+const EmojiView = (props) => {
+    const { state } = props;
+
+    return (
+        <div className="EmojiView">
+            <div className="Emoji__emoji">{state.emoji.icon}</div>
+            <div className="Emoji__name">{state.emoji.name}</div>
+        </div>
+    );
+};
+
+// Component: EmojiButton
+const EmojiButton = (props) =>{
+    const { state, actions } = props;
+    const nextEmoji = () => {
+        while (1) {
+            const index = Math.floor(Math.random() * emojis.length);
+            const emoji = emojis[index];
+            if (emoji.name !== state.emoji.name) {
+                return emoji;
+            }
+        }
+    };
+    
+    return (
+        <div className="EmojiButton">
+            <button className="Emoji__button" onClick={() => {
+                const emoji = nextEmoji();
+                actions.setEmoji(emoji);
+            }}>
+                Next
+            </button>
+        </div>
+    );
+};
+
+// Connect our state and actions to our components
+const mapStateToProps = (state, ownProps) => {
+    return {
+        state: state.emoji
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        actions: bindActionCreators(actions, dispatch)
+    }
+};
+
+const ConnectedEmojiView = connect(mapStateToProps, mapDispatchToProps)(EmojiView);
+const ConnectedEmojiButton = connect(mapStateToProps, mapDispatchToProps)(EmojiButton);
+
+// Store
+const App = combineReducers({
+    emoji: reducer
+});
+const store = createStore(App);
+
+// Render each connected component separatly. 
+// Both components share the same state.
+React.render(
+    <Provider store={store}>
+        <ConnectedEmojiView />
+    </Provider>,
+    document.getElementById('emoji-view')
+);
+
+React.render(
+    <Provider store={store}>
+        <ConnectedEmojiButton />
+    </Provider>,
+    document.getElementById('emoji-button')
+);

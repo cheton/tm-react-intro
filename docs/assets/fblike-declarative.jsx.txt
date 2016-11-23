@@ -1,5 +1,0 @@
-if (this.state.liked) {
-    return <BlueLike />;
-} else {
-    return <GrayLike />;
-}

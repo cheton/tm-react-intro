@@ -1,8 +1,0 @@
-// TodoApp component
-<TodoApp />
-
-// TodoApp.jsx
-<div>
-    <TodoHeader />
-    <TodoList />
-</div>

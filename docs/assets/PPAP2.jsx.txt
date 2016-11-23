@@ -1,0 +1,8 @@
+const PPAP = () => (
+    <span>
+        <Pen />
+        <Pineapple />
+        <Apple />
+        <Pen />
+    </span>
+);

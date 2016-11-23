@@ -1,0 +1,4 @@
+<MessageBox
+    title="Delete"
+    content="Are you sure you want to remove this item?"
+/>

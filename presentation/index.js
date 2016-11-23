@@ -290,7 +290,7 @@ export default Presentation = () => {
                         Declarative
                     </Heading>
                     <br />
-                    <Text textAlign="left">MailForm.jsx</Text>
+                    <Text textAlign="left">MessageBox.jsx</Text>
                     <CodePane
                         lang="jsx"
                         source={require('raw!../assets/declarative-messagebox2.jsx.txt')}

@@ -268,9 +268,8 @@ export default Presentation = () => {
                 </Slide>
                 <Slide
                     notes={`
-                        React的設計思路認為使用Component比起Template和Display Logic
-                        更能實現關注點分離(Separation of Concerns)的概念，
-                        而搭配JSX可以實現宣告式的程式撰寫方式．
+                        使用宣告式的設計很容易看出這個元件的功能，
+                        JSX 在 React 元件撰寫上扮演很重要的角色
                     `}
                 >
                     <Heading size={2} textColor="secondary">
@@ -285,12 +284,15 @@ export default Presentation = () => {
                         textSize="24px"
                     />
                 </Slide>
-                <Slide>
+                <Slide
+                    notes={`
+                        MessageBox 的內部長相
+                    `}
+                >
                     <Heading size={2} textColor="secondary">
                         Declarative
                     </Heading>
                     <br />
-                    <Text textAlign="left">MessageBox.jsx</Text>
                     <CodePane
                         lang="jsx"
                         source={require('raw!../assets/declarative-messagebox2.jsx.txt')}
@@ -298,7 +300,14 @@ export default Presentation = () => {
                         textSize="24px"
                     />
                 </Slide>
-                <Slide>
+                <Slide
+                    notes={`
+                        使用Component比起Template和Display Logic更能實現
+                        關注點分離(Separation of Concerns)的概念，而搭配
+                        JSX可以實現宣告式(Declarative, what to)，而非
+                        命令式(Imperative, how to)的程式撰寫方式
+                    `}
+                >
                     <Image src={images.fblike} />
                     <div className="row">
                         <div className="col-sm-6">

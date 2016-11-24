@@ -1,4 +1,5 @@
 import React from 'react';
+import QRCode from 'qrcode.react';
 
 // Import Spectacle Core tags
 import {
@@ -513,15 +514,13 @@ export default Presentation = () => {
                 </Slide>
                 <Slide
                     notes="http://codepen.io/anon/pen/xRdPGY/"
-                    maxWidth="auto"
-                    maxHeight="auto"
                 >
                     <Text textSize="1.2em" bold>
                         Isolated State with React
                     </Text>
                     <Layout>
                         <Fill>
-                            <iframe height="600" width="100%" scrolling='no' title='Isolated state with ReactJS' src='//codepen.io/cheton/embed/xRdPGY/?height=600&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true'>
+                            <iframe height="600" width="100%" scrolling='no' title='Isolated state with ReactJS' src='//codepen.io/cheton/embed/xRdPGY/?height=600&theme-id=0&default-tab=js,result&embed-version=2' frameBorder="no">
                         See the Pen <a href='http://codepen.io/cheton/pen/xRdPGY/'>Isolated state with ReactJS</a> by Cheton Wu (<a href='http://codepen.io/cheton'>@cheton</a>) on <a href='http://codepen.io'>CodePen</a>.
                             </iframe>
                         </Fill>
@@ -529,30 +528,28 @@ export default Presentation = () => {
                 </Slide>
                 <Slide
                     notes="http://codepen.io/anon/pen/YpVrMO/"
-                    maxWidth="auto"
-                    maxHeight="auto"
                 >
                     <Text textSize="1.2em" bold>
                         Shared State with React - Container
                     </Text>
                     <Layout>
                         <Fill>
-                            <iframe height="600" width="100%" scrolling='no' title='Shared state with ReactJS - Container' src='//codepen.io/cheton/embed/YpVrMO/?height=600&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true'>See the Pen <a href='http://codepen.io/cheton/pen/YpVrMO/'>Shared state with ReactJS - Container</a> by Cheton Wu (<a href='http://codepen.io/cheton'>@cheton</a>) on <a href='http://codepen.io'>CodePen</a>.
+                            <iframe height="600" width="100%" scrolling='no' title='Shared state with ReactJS - Container' src='//codepen.io/cheton/embed/YpVrMO/?height=600&theme-id=0&default-tab=js,result&embed-version=2' frameBorder='no'>
+                                See the Pen <a href='http://codepen.io/cheton/pen/YpVrMO/'>Shared state with ReactJS - Container</a> by Cheton Wu (<a href='http://codepen.io/cheton'>@cheton</a>) on <a href='http://codepen.io'>CodePen</a>.
                             </iframe>
                         </Fill>
                     </Layout>
                 </Slide>
                 <Slide
                     notes="http://codepen.io/anon/pen/GNmMLz/"
-                    maxWidth="auto"
-                    maxHeight="auto"
                 >
                     <Text textSize="1.2em" bold>
                         Shared State with React - Redux
                     </Text>
                     <Layout>
                         <Fill>
-                            <iframe height="600" width="100%" scrolling='no' title='Shared state with ReactJS - Redux' src='//codepen.io/cheton/embed/GNmMLz/?height=600&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true'>See the Pen <a href='http://codepen.io/cheton/pen/GNmMLz/'>Shared state with ReactJS - Redux</a> by Cheton Wu (<a href='http://codepen.io/cheton'>@cheton</a>) on <a href='http://codepen.io'>CodePen</a>.
+                            <iframe height="600" width="100%" scrolling='no' title='Shared state with ReactJS - Redux' src='//codepen.io/cheton/embed/GNmMLz/?height=600&theme-id=0&default-tab=js,result&embed-version=2' frameBorder='no'>
+                                See the Pen <a href='http://codepen.io/cheton/pen/GNmMLz/'>Shared state with ReactJS - Redux</a> by Cheton Wu (<a href='http://codepen.io/cheton'>@cheton</a>) on <a href='http://codepen.io'>CodePen</a>.
                             </iframe>
                         </Fill>
                     </Layout>
@@ -598,6 +595,11 @@ export default Presentation = () => {
                     <Heading size={1} textColor="secondary">
                         Question
                     </Heading>
+                    <br />
+                    <QRCode
+                        value="http://cheton.github.io/tm-react-intro/"
+                        size={256}
+                    />
                 </Slide>
             </Deck>
         </Spectacle>

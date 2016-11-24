@@ -597,7 +597,7 @@ export default Presentation = () => {
                     </Heading>
                     <br />
                     <QRCode
-                        value="http://cheton.github.io/tm-react-intro/"
+                        value="https://www.github.com/cheton/tm-react-intro/"
                         size={256}
                     />
                 </Slide>

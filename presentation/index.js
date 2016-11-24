@@ -446,13 +446,21 @@ export default Presentation = () => {
                             用 JSX 進行宣告式 UI 設計 (Declarative)
                         </ListItem>
                         <ListItem textSize="1.2em">
-                            元件化模式 (Component-based)
+                            UI 元件化 (Component-based)
                         </ListItem>
                         <ListItem textSize="1.2em">
                             Component 狀態 (State) 和生命週期 (Lifecycle)
                         </ListItem>
                         <ListItem textSize="1.2em">
                             Virtual DOM and diffing algorithm
+                            &nbsp;
+                            <Link
+                                href="http://teropa.info/blog/2015/03/02/change-and-its-detection-in-javascript-frameworks.html"
+                                target="_blank"
+                                textSize="0.5em"
+                            >
+                                Learn more
+                            </Link>
                         </ListItem>
                         <ListItem textSize="1.2em">
                             單向資料流 (Unidirection Data Flow)
@@ -462,6 +470,14 @@ export default Presentation = () => {
                         </ListItem>
                         <ListItem textSize="1.2em">
                             CSS-in-JS and CSS Modules
+                            &nbsp;
+                            <Link
+                                href="https://github.com/css-modules/css-modules"
+                                target="_blank"
+                                textSize="0.5em"
+                            >
+                                Learn more
+                            </Link>
                         </ListItem>
                     </List>
                 </Slide>
